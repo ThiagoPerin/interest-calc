@@ -31,7 +31,7 @@ To run the project locally, follow the steps below:
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/seu-usuario/interest-calc.git
+   git clone https://github.com/ThiagoPerin/interest-calc.git
 2. Access the folder:
    ```bash
    cd interest-calc
