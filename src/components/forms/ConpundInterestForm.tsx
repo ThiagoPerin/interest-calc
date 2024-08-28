@@ -128,7 +128,7 @@ function CompoundInterestForm({ onCalculate }: CompoundInterestFormProps) {
 								name="interest-rate"
 								type="number"
 								placeholder="0.00"
-								min={0}
+								min={0.01}
 								max={interestRatePeriod as string === "Yearly" ? 10000 : 50}
 								step="0.01"
 								value={interestRate}
@@ -163,7 +163,7 @@ function CompoundInterestForm({ onCalculate }: CompoundInterestFormProps) {
 								name="interest-period"
 								type="number"
 								placeholder="0"
-								min={0}
+								min={1}
 								max={interestPeriodUnit === "Years" ? 100 : 1200}
 								value={interestPeriod}
 								onChange={handleInterestPeriodChange}
