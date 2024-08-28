@@ -79,6 +79,8 @@ function CompoundInterestForm({ onCalculate }: CompoundInterestFormProps) {
 								name="initial-value"
 								type="number"
 								placeholder="0.00"
+								min={0}
+								max={1000000000}
 								value={initialValue}
 								onChange={handleInitialValueChange}
 								className="block w-full rounded-md border-0 py-1.5 pl-7 pr-20 text-black ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6 appearance-textfield no-spin-buttons"
@@ -100,6 +102,8 @@ function CompoundInterestForm({ onCalculate }: CompoundInterestFormProps) {
 								name="monthly-value"
 								type="number"
 								placeholder="0.00"
+								min={0}
+								max={100000000}
 								value={monthlyValue}
 								onChange={handleMonthlyValueChange}
 								className="block w-full rounded-md border-0 py-1.5 pl-7 pr-20 text-black ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6 appearance-textfield no-spin-buttons"
@@ -117,10 +121,13 @@ function CompoundInterestForm({ onCalculate }: CompoundInterestFormProps) {
 								<span className="text-gray-500 sm:text-sm">%</span>
 							</div>
 							<input
+								key={interestRatePeriod}
 								id="interest-rate"
 								name="interest-rate"
 								type="number"
 								placeholder="0.00"
+								min={0}
+								max={interestRatePeriod as string === "Yearly" ? 10000 : 50}
 								value={interestRate}
 								onChange={handleInterestRateChange}
 								className="block w-full rounded-md border-0 py-1.5 pl-7 pr-20 text-black ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6 appearance-textfield no-spin-buttons"
@@ -148,10 +155,13 @@ function CompoundInterestForm({ onCalculate }: CompoundInterestFormProps) {
 						</SimpleInputLabel>
 						<div className="relative mt-2 rounded-md shadow-sm">
 							<input
+							key={interestPeriodUnit}
 								id="interest-period"
 								name="interest-period"
 								type="number"
 								placeholder="0"
+								min={0}
+								max={interestPeriodUnit === "Years" ? 100 : 1200}
 								value={interestPeriod}
 								onChange={handleInterestPeriodChange}
 								className="block w-full rounded-md border-0 py-1.5 pl-4 pr-20 text-black ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6 appearance-textfield no-spin-buttons"
