@@ -81,6 +81,7 @@ function CompoundInterestForm({ onCalculate }: CompoundInterestFormProps) {
 								placeholder="0.00"
 								min={0}
 								max={1000000000}
+								step="0.01"
 								value={initialValue}
 								onChange={handleInitialValueChange}
 								className="block w-full rounded-md border-0 py-1.5 pl-7 pr-20 text-black ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6 appearance-textfield no-spin-buttons"
@@ -104,6 +105,7 @@ function CompoundInterestForm({ onCalculate }: CompoundInterestFormProps) {
 								placeholder="0.00"
 								min={0}
 								max={100000000}
+								step="0.01"
 								value={monthlyValue}
 								onChange={handleMonthlyValueChange}
 								className="block w-full rounded-md border-0 py-1.5 pl-7 pr-20 text-black ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6 appearance-textfield no-spin-buttons"
@@ -128,6 +130,7 @@ function CompoundInterestForm({ onCalculate }: CompoundInterestFormProps) {
 								placeholder="0.00"
 								min={0}
 								max={interestRatePeriod as string === "Yearly" ? 10000 : 50}
+								step="0.01"
 								value={interestRate}
 								onChange={handleInterestRateChange}
 								className="block w-full rounded-md border-0 py-1.5 pl-7 pr-20 text-black ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6 appearance-textfield no-spin-buttons"
